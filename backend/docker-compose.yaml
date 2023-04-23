@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build: .
+    image: dentistry-backend
+    expose:
+      - "3333"
+    ports:
+      - 3333:3333
+    environment:
+      PORT: 3333
+      MONGO_URI: mongodb+srv://dentistry:dentistry123@dentistry-backend.c6kd5wm.mongodb.net/?retryWrites=true&w=majority
+      JWT_EXPIRE: 2h
+      KEY_SESSION: hihihi
+      JWT_ACCESS_KEY: AC
+      JWT_REFRESH_KEY: RF
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge

@@ -1,0 +1,5 @@
+{
+    "name": "dentistry-backend",
+    "script": "yarn run production",
+    "instances": "1"
+}

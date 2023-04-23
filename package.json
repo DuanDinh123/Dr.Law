@@ -1,0 +1,22 @@
+{
+  "name": "Dr.Law",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "client:dev": "cd frontend && yarn start",
+    "server:dev": "cd backend && yarn dev",
+    "client:install": "cd frontend && yarn install",
+    "server:install": "cd backend && yarn install",
+    "dev": "concurrently \"cd backend && yarn dev\" \"cd frontend && yarn start\"",
+    "client:build": "cd frontend && yarn build",
+    "server:build": "cd backend && yarn build",
+    "build": "concurrently \"yarn client:build\" \"yarn server:build\"",
+    "client:start": "cd frontend && yarn preview",
+    "server:start": "cd backend && yarn start",
+    "start": "concurrently \"yarn client:start\" \"yarn server:start\"",
+    "app": "yarn build && yarn start"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
